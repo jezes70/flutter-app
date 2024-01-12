@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:social_app/components/user_avatar.dart';
+import 'package:social_app/config/app_routes.dart';
 import 'package:social_app/pages/main_page.dart';
 import 'package:social_app/pages/edit_profile_page.dart';
 import 'package:social_app/styles/app_colors.dart';
@@ -19,7 +21,7 @@ class ProfilePage extends StatelessWidget {
             onSelected: (value) {
               switch (value) {
                 case ProfileMenu.edit:
-                  Navigator.of(context).pushNamed('/edit_profile');
+                  Navigator.of(context).pushNamed(AppRoutes.editProfile);
                   break;
                 case ProfileMenu.logout:
                   print('log out');
@@ -40,45 +42,25 @@ class ProfilePage extends StatelessWidget {
             },
           ),
         ],
-        leading: const LeadingIconButton(route: '/Dashboard'),
+        leading: const LeadingIconButton(route: AppRoutes.dashboard),
         backgroundColor: AppColors.background,
       ),
-      body: Column(
+      body: const Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(16),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const EditProfilePage()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.zero,
-                backgroundColor: AppColors.background,
-              ),
-              child: Image.asset(
-                'assets/temp/user1.png',
-                height: 90,
-                width: 90,
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
+          UserAvatar(size: 120,),
 
-          const SizedBox(height: 12),
-          const Text(
+          SizedBox(height: 12),
+          Text(
             'Mass Miracle',
             style: AppText.header2,
           ),
-          const SizedBox(height: 12),
-          const Text(
+          SizedBox(height: 12),
+          Text(
             'Madagascar',
             style: AppText.subtitle3,
           ),
-          const SizedBox(height: 24),
-          const Row(
+          SizedBox(height: 24),
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
@@ -112,7 +94,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ],
           ),
-          const Divider(thickness: 1, height: 24),
+          Divider(thickness: 1, height: 24),
         ],
       ),
     );

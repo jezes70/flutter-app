@@ -1,0 +1,31 @@
+class AppStrings {
+  static const appName = 'Social App';
+  static const helloWelcome = 'Hello Welcome Back';
+  static const loginToContinue = 'Login To Continue';
+  static const username = 'UserName';
+  static const password = 'Password';
+  static const fotgotPassword = 'Fotgot Password';
+  static const orSignInWith = 'Or Sign In With';
+  static const loginInWithGoogle = 'Login In With Google';
+  static const loginInWithFacebook = 'Login In With Facebook';
+  static const dontHaveAccount = "Don't Have Account?";
+  static const signUp = 'Sign Up';
+  static const home = 'Home';
+  static const favorite = 'Favorite';
+  static const Add = 'Add';
+  static const message = 'Message';
+  static const user = 'User';
+  static const followers = 'Followers';
+  static const post = 'Post';
+  static const following = 'Following';
+  static const profile = 'Profile';
+  static const editProfile = 'Edit Profile';
+  static const firstName = 'FirstName';
+  static const lastName = 'LastName';
+  static const phoneNumber = 'PhoneNumber';
+  static const location = 'Location';
+  static const birthday = 'Birthday';
+  static const male = 'Male';
+  static const female = 'Female';
+  static const other = 'Other';
+}

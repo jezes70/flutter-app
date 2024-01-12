@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:social_app/config/app_routes.dart';
+import 'package:social_app/config/app_strings.dart';
 import 'package:social_app/pages/Dashboard_Screen.dart';
 
 class LoginPage extends StatelessWidget {
@@ -10,7 +12,8 @@ class LoginPage extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 85,
         title: const Text(
-          'Hello, welcome back!',
+          AppStrings.helloWelcome,
+          // 'Hello, welcome back!',
           style: TextStyle(
             color: Colors.white,
             fontSize: 22,
@@ -29,7 +32,8 @@ class LoginPage extends StatelessWidget {
               children: [
                 const Spacer(),
                 const Text(
-                  'Login to continue',
+                  AppStrings.loginToContinue,
+                  // 'Login to continue',
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -79,7 +83,7 @@ class LoginPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacementNamed('/main'
+                      Navigator.of(context).pushReplacementNamed(AppRoutes.main
                           // MaterialPageRoute(
                           //   builder: (context) {
                           //     return const DashboardScreen();
@@ -176,7 +180,7 @@ class LoginPage extends StatelessWidget {
                 Row(
                   children: [
                     const Text(
-                      'Don\'t have an account?',
+                      "Don't have an account?",
                       style: TextStyle(
                         color: Colors.white,
                       ),

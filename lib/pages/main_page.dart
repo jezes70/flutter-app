@@ -56,7 +56,6 @@ class _MainPageState extends State<MainPage> {
   }
 
   final List<Widget?> pages = [
-    // Replace HomePage() with the actual widget or content for the 'Dashboard' tab
     Container(
       // color: Colors.blue,
       child: const Center(child: Text('Dashboard Content')),
